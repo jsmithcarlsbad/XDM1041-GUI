@@ -1,0 +1,16 @@
+# XDM1041 app — install ONLY into THIS folder's venv (never global Python / not PICO/.venv).
+#
+#   XDM1041\.venv\Scripts\python.exe -m pip install -r requirements.txt
+#
+# Or activate first:
+#   XDM1041\.venv\Scripts\activate
+#   pip install -r requirements.txt
+#
+# Always run the GUI with: XDM1041\.venv\Scripts\python.exe your_app.py
+#
+# Standalone Cursor: File -> Open Workspace from File... -> XDM1041.code-workspace
+# (new terminals use XDM1041\.venv via settings below)
+
+pyserial>=3.5
+PySide6>=6.6
+qt-material>=2.14

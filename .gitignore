@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Local app settings (COM port, theme — recreated by app)
+XDM_GUI.ini
+
+# IDE / OS
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,8 @@
+# Install into XDM1041\.venv only (not global Python):
+#   XDM1041\.venv\Scripts\python.exe -m pip install -r requirements-exe.txt
+# Typical one-folder build:
+#   XDM1041\.venv\Scripts\pyinstaller --onefile --windowed --name XDM1041Calib your_main.py
+#
+# You may need --add-data / hidden-import flags depending on Qt plugins and resources.
+
+pyinstaller>=6.0
