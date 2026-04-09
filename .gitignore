@@ -17,7 +17,12 @@ build/
 # Local app settings (COM port, theme — recreated by app)
 XDM_GUI.ini
 
+# Qt icon resources (optional: python tools/build_icons_rc.py — GUI falls back to ICONS/ on disk)
+icons.qrc
+icons_rc.py
+
 # IDE / OS
+.cursor/
 .idea/
 *.swp
 Thumbs.db

@@ -1,16 +1,39 @@
-# XDM1041 app — install ONLY into THIS folder's venv (never global Python / not PICO/.venv).
+# XDM1041 — dependencies for THIS repository only.
 #
-#   XDM1041\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# =============================================================================
+# RULE: After `.venv` exists, use ONLY that environment for pip and Python.
+#       Do not install into or run the app with system / “default” Python.
+# =============================================================================
 #
-# Or activate first:
-#   XDM1041\.venv\Scripts\activate
-#   pip install -r requirements.txt
+# --- One-time bootstrap (uses OS Python once to create the venv) ---
 #
-# Always run the GUI with: XDM1041\.venv\Scripts\python.exe your_app.py
+#   Windows (example):
+#     py -3 -m venv .venv
 #
-# Standalone Cursor: File -> Open Workspace from File... -> XDM1041.code-workspace
-# (new terminals use XDM1041\.venv via settings below)
+#   macOS / Linux:
+#     python3 -m venv .venv
+#
+# --- Install / upgrade dependencies (ONLY the new venv’s interpreter) ---
+#
+#   Windows:
+#     .venv\Scripts\python.exe -m pip install -U pip
+#     .venv\Scripts\python.exe -m pip install -r requirements.txt
+#
+#   macOS / Linux:
+#     .venv/bin/python3 -m pip install -U pip
+#     .venv/bin/python3 -m pip install -r requirements.txt
+#
+# --- Run the GUI ---
+#
+#   Windows:    .venv\Scripts\python.exe XDM1041_GUI.py
+#   Unix:       .venv/bin/python3 XDM1041_GUI.py
+#
+# Optional: open XDM1041.code-workspace so the editor uses `.venv` in terminals.
+#
+# Direct packages below are everything this repo imports from PyPI; transitive
+# deps (e.g. from qt-material) are pulled in automatically by pip.
 
-pyserial>=3.5
-PySide6>=6.6
-qt-material>=2.14
+pyserial>=3.5,<4
+PySide6>=6.6,<7
+qt-material>=2.14,<3
+Pillow>=10.0,<13
